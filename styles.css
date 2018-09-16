@@ -1,0 +1,22 @@
+html {
+    font-size: 62.5%
+}
+
+
+.ball {
+    width: 4rem;
+    height: 4rem;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(0.6rem)
+}
+
+.board{
+    width: 20rem;
+    height: 2rem;
+    background-color: darkgreen;
+    position: absolute;
+    bottom: 2rem;
+}
+
