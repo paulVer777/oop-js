@@ -9,7 +9,7 @@ html {
     background-color: brown;
     border-radius: 50%;
     position: absolute;
-    filter: blur(0.6rem)
+    /* filter: blur(0.6rem) */
 }
 
 .board{
@@ -20,3 +20,9 @@ html {
     bottom: 2rem;
 }
 
+.score{
+    font-size: 2rem;
+    position: absolute;
+    z-index: 100;
+    
+}

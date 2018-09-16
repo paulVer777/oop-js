@@ -1,8 +1,3 @@
-function collisionChecker() {
-    console.log('hej')
-}
-
-
 class Ball {
 
     constructor() {
@@ -12,15 +7,20 @@ class Ball {
         this.moveX = 10
         this.moveY = 10
         this.points = 0
-        this.boardX=0
+        this.boardX = 0
     }
-    collisionChecker() {
+    collisionCheckerBall() {
 
         this.positionX > innerWidth - 50 ? this.moveX = -10 : ''
         this.positionX < 0 ? this.moveX = 10 : ''
 
         this.positionY > innerHeight - 50 ? this.moveY = -10 : ''
         this.positionY < 10 ? this.moveY = 10 : ''
+    }
+    collisionCheckerBoard() {
+
+        this.boardX < 20 ? this.boardX = 0 : ''
+        this.boardX > innerWidth - 220 ? this.boardX = innerWidth - 220 : ''
     }
     runForestRun() {
 
@@ -35,7 +35,7 @@ class Ball {
 
     engine() {
 
-        this.collisionChecker()
+        this.collisionCheckerBall()
         this.runForestRun()
         this.weAreTheChampions()
 
@@ -48,23 +48,23 @@ class Ball {
 
 const game = new Ball()
 
-setInterval(()=>{
+setInterval(() => {
 
 
-game.collisionChecker()
-game.runForestRun()
-game.weAreTheChampions()
+    game.collisionCheckerBall()
+    game.runForestRun()
+    game.weAreTheChampions()
 
-},45)
+}, 45)
 
 
 window.addEventListener('keypress', (e) => {
 
+    game.collisionCheckerBoard()
 
-    e.key === 'd' ? document.querySelector('.board').style.left=`${game.boardX+=20}px` : ''
-    e.key === 'a' ? document.querySelector('.board').style.left=`${game.boardX+=-20}px` : ''
+    e.key === 'd' ? document.querySelector('.board').style.left = `${game.boardX+=20}px` : ''
+    e.key === 'a' ? document.querySelector('.board').style.left = `${game.boardX+=-20}px` : ''
 
-    game.boardX < 20 ? game.boardX=0 : ''
-    game.boardX > innerWidth-220 ? game.boardX=innerWidth-220 : ''
- 
+
+
 })
