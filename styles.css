@@ -1,7 +1,8 @@
 html {
-    font-size: 62.5%
+    font-size: 62.5%  
 }
 
+/* 1 REM = 10px */
 
 .ball {
     width: 4rem;
@@ -24,5 +25,8 @@ html {
     font-size: 2rem;
     position: absolute;
     z-index: 100;
-    
+    right: 3rem;
+    top:3rem;
+    font-size: 3rem;
+    font-weight: bold;
 }
