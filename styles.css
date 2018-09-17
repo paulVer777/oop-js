@@ -11,7 +11,7 @@ html {
     border-radius: 50%;
     position: absolute;
     /* filter: blur(0.6rem) */
-    
+
 }
 
 .board {
@@ -34,45 +34,60 @@ html {
 
 
 .btn {
-    padding: 0.5rem 1rem;
+    width: 4rem;
+    height: 4rem;
     font-size: 2rem;
     font-weight: bold;
     /* position: relative; */
     top: 3rem;
-    left:3rem;
+    left: 3rem;
+    border: none;
 }
 
 
-.wrapper{
+.wrapper {
     position: relative;
 }
 
-.paragraph{
+.paragraph {
 
-display: inline-block;
-font-size: 3rem;
-font-weight: bold;
-margin-right: 1rem;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 1rem;
 }
 
-.difficulty-line{
+.difficulty-line {
 
-  height: 2rem;
-  background-color: purple;
-  width: 10rem;
-  display: inline-block;
+    height: 2rem;
+    background-color: purple;
+    width: 10rem;
+    display: inline-block;
 
 }
 
-.btn-box{
-position: relative;
-left:1rem;
-display: inline-block;
+.btn-box {
+    position: relative;
+    left: 1rem;
+    display: inline-block;
 }
 
-.farewell{
+.farewell {
 
     text-align: center;
     font-size: 4rem;
 }
 
+.btn-reload {
+
+    margin: auto;
+    background-color: blue;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}

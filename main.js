@@ -24,6 +24,7 @@ class Ball {
             const button = document.createElement('button')
 
             button.textContent = 'Try again'
+            button.classList.add('btn-reload')
             button.addEventListener('click', (e) => {
                 location.reload()
             })
