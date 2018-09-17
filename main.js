@@ -16,6 +16,16 @@ class Ball {
 
         this.positionY > innerHeight - 50 ? this.moveY = -10 : ''
         this.positionY < 10 ? this.moveY = 10 : ''
+
+
+        /// this statement checks if ball collided with board, if its true it changes the Y direction of ball
+
+        for (let i = 0; i < 200; i++) {
+            if (this.positionY < 40 && this.positionX === this.boardX + i) {
+                this.moveY = 10
+            }
+        }
+       ///////////////////////////////////////////////////////////////////////////////////////////////
     }
     collisionCheckerBoard() {
 
@@ -26,7 +36,7 @@ class Ball {
 
         document.querySelector('.ball').style.left = `${this.positionX += this.moveX}px`
         document.querySelector('.ball').style.bottom = `${this.positionY += this.moveY}px`
-
+        console.log(this.positionY)
     }
     weAreTheChampions() {
         document.querySelector('.score').textContent = this.points
@@ -64,7 +74,18 @@ window.addEventListener('keypress', (e) => {
 
     e.key === 'd' ? document.querySelector('.board').style.left = `${game.boardX+=20}px` : ''
     e.key === 'a' ? document.querySelector('.board').style.left = `${game.boardX+=-20}px` : ''
-
-
+    console.log(game.boardX)
 
 })
+
+
+
+for (let i = 0; i < 200; i++) {
+
+    if (this.positionY < 20 && this.positionX === this.boardX + i) {
+        this.moveY = 10
+
+    }
+
+
+}
